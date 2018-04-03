@@ -1,0 +1,125 @@
+.threeLines{
+	width:	40px;
+	height:	30px;
+
+	/* 子要素がこのクラスを基準に絶対位置指定できる */
+	position: relative;
+
+	/* カーソル指定 */
+	cursor: pointer;
+}
+
+span{
+	background-color: black;
+	width:40px;
+	height:2px;
+
+	/* 要素を縦に並べる */
+	display: block;
+
+	/* 親要素の左上の位置からの絶対位置を指定 */
+	position: absolute;
+
+	/* アニメーションの実行時間を指定 */
+	transition-duration: 0.25s;
+}
+
+.threeLines .line1{
+	top:		0;
+}
+
+.threeLines .line2{
+	top:		14px;
+}
+
+.threeLines .line3{
+	top:		14px;
+}
+.threeLines .line4{
+	bottom:	0;
+}
+
+.active span{
+	/*
+	background-color: #faa;
+	*/
+}
+
+.active .line2{
+	/* 45度回転 */
+	transform: rotate(45deg);
+}
+
+.active .line3{
+	/* 90度回転 */
+	transform: rotate(-45deg);
+
+}
+
+.active .line1,.active .line4{
+	/* 拡大縮小 x,y方向 */
+	transform: scale(0,0);
+}
+
+/* リストに関する設定 */
+div.list1{
+	display: none;
+}
+
+h3{
+	margin: 0px;
+}
+h3 a:before{
+  top: .75em;
+  right: 20px;
+  height: 3px;
+  width: 10px;
+  transform: rotate(-45deg);
+  background-color:black;
+}
+
+ul{
+	margin: 0px;
+	padding: 0px;
+}
+ul.itemList1{
+	display: none;
+}
+li{
+	/* リストの初期設定OFF */
+	list-style: none;
+}
+
+a{
+	color: black;
+}
+
+.categoryList1 li{
+	background-color: white;
+	color: white;
+}
+
+.categoryList1 h3:before{
+	content:"+";
+	color: black;
+}
+
+.categoryList1 h3.active{
+	background-color: #f00056;
+}
+
+.categoryList1 h3.active a{
+	color: white;
+}
+
+.categoryList1 h3.active:before{
+	content:"-";
+	color: white;
+}
+
+.itemList1 li{
+	background-color: #161b1d;
+}
+.itemList1 a{
+	color: white;
+}

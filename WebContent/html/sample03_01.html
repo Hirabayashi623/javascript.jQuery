@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta name="robots" content="noindex,nofollow" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+	<title>デモ - 【jQuery入門 3】要素を取得しよう。セレクタって何？後編</title>
+	<link rel="stylesheet" href="/jQuery/css/sample03_01.css">
+</head>
+<body>
+
+	<div class="contents">
+
+		<h1 class="title01">デモ - 【jQuery入門 3】要素を取得しよう。セレクタって何？後編</h1>
+
+		<div class="intro">
+			<p>公式のドキュメントを見ながらどうぞ。</p>
+			<a href="http://api.jquery.com/" target="_blank" title="jQuery API Documentation">jQuery API Documentation</a>
+			<p>英語ですが、だいたいの単語がわかれば(ぐぐれば)問題ないです。</p>
+			<ul>
+				<li><a href="#demo01">find()</a></li>
+				<li><a href="#demo02">prev()</a></li>
+				<li><a href="#demo03">next()</a></li>
+				<li><a href="#demo04">eq()</a></li>
+				<li><a href="#demo05">first()</a></li>
+				<li><a href="#demo06">last()</a></li>
+				<li><a href="#demo07">is()</a></li>
+				<li><a href="#demo08">not()</a></li>
+				<li><a href="#demo09">children()</a></li>
+				<li><a href="#demo10">parent()</a></li>
+			</ul>
+		</div>
+
+
+
+		<!-- DEMO 01 -->
+
+		<div class="demo demo01">
+			<h2 id="demo01" class="title02">DEMO 01 : find()</h2>
+			<ol>
+				<li>指定した条件「class『.demo1_target2』の要素」を取得する</li>
+				<li>選択した要素のclassを追加する</li>
+			</ol>
+			<div class="demo01_target">
+				<p class="demo01_target3">古より伝わりし</p>
+				<p class="demo01_target3">黄昏の楽園から舞い降りた</p>
+				<p class="demo01_target2">闇の力を纏いし王の</p>
+				<p class="demo01_target3">光無き傀儡を従えし</p>
+				<p class="demo01_target2">としお</p>
+			</div>
+		</div>
+
+
+
+		<!-- DEMO 02 -->
+
+		<div class="demo demo02">
+			<h2 id="demo02" class="title02">DEMO 02 : prev()</h2>
+			<ol>
+				<li>指定した条件「class『demo2_target2』の要素」<strong>直前</strong>にある要素を取得する</li>
+				<li>選択した要素にclass「demo02_target3」を追加する</li>
+			</ol>
+			<div class="demo02_inner">
+				<p class="demo02_target">のぶなが<br>.demo02_target</p>
+				<p class="demo02_target2">みちこ<br>.demo02_target2</p>
+				<p class="demo02_target">よしむね<br>.demo02_target</p>
+				<p class="demo02_target">かげむしゃ<br>.demo02_target</p>
+				<p class="demo02_target">さえきさん<br>.demo02_target</p>
+				<p class="demo02_target">ごりら<br>.demo02_target</p>
+				<p class="demo02_target">おもち<br>.demo02_target</p>
+				<p class="demo02_target2">つとむ<br>.demo02_target2</p>
+			</div>
+		</div>
+
+
+
+		<!-- DEMO 03 -->
+
+		<div class="demo demo03">
+			<h2 id="demo03" class="title02">DEMO 03 : next()</h2>
+			<ol>
+				<li>指定した条件「class『demo03_target2』の要素」<strong>直後</strong>にある要素を取得する</li>
+				<li>選択した要素にclass「demo03_target3」を追加する</li>
+			</ol>
+			<div class="demo03_inner">
+				<p class="demo03_target2">のぶなが<br>.demo03_target2</p>
+				<p class="demo03_target">みちこ<br>.demo03_target</p>
+				<p class="demo03_target">よしむね<br>.demo03_target</p>
+				<p class="demo03_target">かげむしゃ<br>.demo03_target</p>
+				<p class="demo03_target">さえきさん<br>.demo03_target</p>
+				<p class="demo03_target">ごりら<br>.demo03_target</p>
+				<p class="demo03_target2">おもち<br>.demo03_target2</p>
+				<p class="demo03_target">つとむ<br>.demo03_target</p>
+			</div>
+		</div>
+
+
+
+		<!-- DEMO 04 -->
+
+		<div class="demo demo04">
+			<h2 id="demo04" class="title02">DEMO 04 : eq()</h2>
+			<ol>
+				<li>指定した条件「demo04_inner p」の<strong>7番目の要素</strong>を取得する</li>
+				<li>選択した要素にclass「demo04_target」を追加する</li>
+			</ol>
+			<div class="demo04_inner">
+				<p>01</p>
+				<p>02</p>
+				<p>03</p>
+				<p>04</p>
+				<p>05</p>
+				<p>06</p>
+				<p>07</p>
+				<p>08</p>
+			</div>
+		</div>
+
+
+
+		<!-- DEMO 05 -->
+
+		<div class="demo demo05">
+			<h2 id="demo05" class="title02">DEMO 05 : first()</h2>
+			<ol>
+				<li>指定した条件「demo05_inner p」の<strong>最初の要素</strong>を取得する</li>
+				<li>選択した要素にclass「demo05_target」を追加する</li>
+			</ol>
+			<div class="demo05_inner">
+				<p>01</p>
+				<p>02</p>
+				<p>03</p>
+				<p>04</p>
+				<p>05</p>
+				<p>06</p>
+				<p>07</p>
+				<p>08</p>
+			</div>
+		</div>
+
+
+
+		<!-- DEMO 06 -->
+
+		<div class="demo demo06">
+			<h2 id="demo06" class="title02">DEMO 06 : last()</h2>
+			<ol>
+				<li>指定した条件「demo06_inner p」の<strong>最後の要素</strong>を取得する</li>
+				<li>選択した要素にclass「demo06_target」を追加する</li>
+			</ol>
+			<div class="demo06_inner">
+				<p>01</p>
+				<p>02</p>
+				<p>03</p>
+				<p>04</p>
+				<p>05</p>
+				<p>06</p>
+				<p>07</p>
+				<p>08</p>
+			</div>
+		</div>
+
+
+
+		<!-- DEMO 07 -->
+
+		<div class="demo demo07">
+			<h2 id="demo07" class="title02">DEMO 07 : is()</h2>
+			<ol>
+				<li>指定した条件のclass「demo07_inner p:even」と<strong>一致する要素</strong>を取得する</li>
+				<li>選択した要素にclass「demo07_target」を追加する</li>
+			</ol>
+
+			<div class="demo07_inner">
+				<p>01</p>
+				<p>02</p>
+				<p>03</p>
+				<p>04</p>
+				<p>05</p>
+				<p>06</p>
+				<p>07</p>
+				<p>08</p>
+			</div>
+		</div>
+
+
+
+		<!-- DEMO 08 -->
+
+		<div class="demo demo08">
+			<h2 id="demo08" class="title02">DEMO 08 : not()</h2>
+			<ol>
+				<li>指定した条件のclass「demo08_target」と<strong>一致しない要素</strong>を取得する</li>
+				<li>選択した要素にclass「demo08_target2」を追加する</li>
+			</ol>
+
+			<div class="demo08_inner">
+				<p>01</p>
+				<p>02</p>
+				<p class="demo08_target">03</p>
+				<p>04</p>
+				<p class="demo08_target">05</p>
+				<p>06</p>
+				<p>07</p>
+				<p>08</p>
+			</div>
+		</div>
+
+
+
+		<!-- DEMO 09 -->
+
+		<div class="demo demo09">
+			<h2 id="demo09" class="title02">DEMO 09 : children()</h2>
+			<p>class「demo09_trigger」の要素「ふふふ・・・」をクリックすると、「demo09_target p」要素の<strong>子要素</strong>(span)のclassを切り替える</p>
+
+			<button class="btn_trigger demo09_trigger">ふふふ・・・</button>
+			<div class="demo09_inner">
+				<div class="demo09_target">
+					<p><span>01</span></p>
+					<p><span>02</span></p>
+					<p><span>03</span></p>
+					<p><span>04</span></p>
+					<p><span>05</span></p>
+					<p><span>06</span></p>
+					<p><span>07</span></p>
+					<p><span>08</span></p>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- DEMO 10 -->
+
+		<div class="demo demo10">
+			<h2 id="demo10" class="title02">DEMO 10 : parent()</h2>
+			<p>class「demo10_trigger」の要素「ぽちぽち」をクリックすると、「demo10_target」要素の<strong>親要素</strong>(class「demo10_inner」)にclass「demo10_target2」を追加する</p>
+
+			<button class="btn_trigger demo10_trigger">ぽちぽち</button>
+			<div class="demo10_inner">
+				class「demo10_inner」
+				<div class="demo10_target">
+					<p>class「demo10_target」</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- jQuery 本体 -->
+	<script src="/jQuery/js/jquery-3.2.1.min.js"></script>
+
+	<!-- jQuery 処理用のファイル -->
+	<script src="/jQuery/js/sample03_01.js"></script>
+
+</body>
+</html>
